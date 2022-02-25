@@ -180,10 +180,6 @@ img{
   background-color: transparent;
 }
 
-.next-button:hover{
-  border-color:var(--brand-color);
-  color: var(--brand-color);
-}
 
 .next-button::before{
   position: absolute;
@@ -211,8 +207,18 @@ img{
 
 .discoint-select-content .next-button:hover{
   background-image: none;
+}
+
+.footer-form-content .next-button {
+  height: auto;
+  background-color: var(--text-color);
+  color: #fff;
+}
+
+.next-button:hover{
+  background-color: transparent;
+  border-color:var(--brand-color);
   color: var(--brand-color);
-  border-color: var(--brand-color);
 }
 
 .next-button:active{
@@ -790,6 +796,7 @@ pointer-events: none;
 .social-link:hover{
   color: var(--brand-color);
 }
+
 .social-img {
   display: block;
   width: 40px;
@@ -806,6 +813,7 @@ pointer-events: none;
   font-weight: 600;
   font-size: 20px;
   line-height: 25px;
+  white-space: nowrap;
 }
 
 .footer-lists {
@@ -824,6 +832,7 @@ pointer-events: none;
 font-size: 14px;
 line-height: 17px;
 text-decoration: none;
+white-space: nowrap;
 }
 
 .footer-link:hover{
@@ -860,4 +869,54 @@ text-decoration: none;
 .footer-bottom-header:nth-child(2){
   margin-right: auto;
   margin-left: auto;
+}
+
+.footer-menu-header {
+  margin-top: 0;
+  margin-bottom: 10px;
+font-weight: 600;
+font-size: 20px;
+line-height: 25px;
+}
+
+.footer-form-content {
+  display: flex;
+}
+
+.footer-field-wrapper {
+  margin-right: 10px;
+}
+
+.footer-field {
+  position: relative;
+}
+
+.footer-field:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.footer-input {
+  padding: 15px 15px 15px 40px;
+  border: 2px solid var(--text-color);
+}
+
+.footer-field-span::before{
+  position: absolute;
+  left: 10px;
+  bottom: 50%;
+  transform: translateY(50%);
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer-field:first-child .footer-field-span::before{
+  background-image: url("../img/account.svg");
+}
+
+.footer-field:last-child .footer-field-span:before{
+  background-image: url("../img/tel.svg");
 }
